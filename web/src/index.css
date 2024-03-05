@@ -18,6 +18,7 @@ body {
   font-family: 'Roboto', sans-serif;
   width: 100vw;
   height: 100vh;
+  scroll-behavior: smooth;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -29,4 +30,21 @@ body::-webkit-scrollbar {
 body {
   -ms-overflow-style: none !important; /* IE and Edge */
   scrollbar-width: none !important; /* Firefox */
+}
+
+/* CUSTOM ANTD */
+.ant-modal-footer .ant-btn-primary {
+  background-color: #1677ff !important;
+}
+
+.anticon-right,
+.anticon-left,
+.anticon-left svg,
+.anticon-right svg {
+  width: 23px;
+  height: 23px;
+}
+
+#landing-arrow::before {
+  display: none;
 }

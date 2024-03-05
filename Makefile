@@ -12,6 +12,7 @@ devrun:
 
 devinstall:
 	@docker exec -it ${COMPOSE_PROJECT_NAME}-web-1 yarn
+	@test -f web/.env || cp web/.env.example web/.env
 	@docker exec -it $(COMPOSE_PROJECT_NAME)-api-1 composer install
 	@test -f api/.env || (cp api/.env.example api/.env && docker exec -it ${COMPOSE_PROJECT_NAME}-api-1 php artisan key:generate)
 	@docker exec -it $(COMPOSE_PROJECT_NAME)-api-1 sh -c "chown -R :www-data storage/* bootstrap/cache"

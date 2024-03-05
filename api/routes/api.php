@@ -19,6 +19,6 @@ use App\Http\Controllers\UserContactController;
 Route::apiResource('user-contacts', UserContactController::class);
 
 /* Show query log for debugging */
-DB::listen(function($query) {
-    var_dump($query->sql);
-});
+// DB::listen(function($query) {
+//     var_dump($query->sql);
+// });
